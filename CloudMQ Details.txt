@@ -1,0 +1,6 @@
+
+
+Server	orangutan.rmq.cloudamqp.com
+User & Vhost	heuyxfbo
+Password	ElwtRyFJPKsYLG_cBxUskQVc95KPKOx8
+AMQP URL	amqp://heuyxfbo:ElwtRyFJPKsYLG_cBxUskQVc95KPKOx8@orangutan.rmq.cloudamqp.com/heuyxfbo

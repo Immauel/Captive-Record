@@ -1,0 +1,11 @@
+{
+  "name": "apigateway",
+  "version": "1.0.0",
+  "description": "This i the application end point, that will be accepting all requests from client devices, it will also be acting as a balance loader",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Immanuel Fransiskus",
+  "license": "ISC"
+}

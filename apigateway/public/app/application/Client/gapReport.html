@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Captive Record</title>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index.html" class="logo"><img src="img/logo-nav.png" width="60"><span class="lite">Captive Record</span></a>
+            <!--logo end-->
+
+            <div class="nav search-row" id="top_menu">
+                <!--  search form start -->
+                <ul class="nav top-menu">                    
+                    <li>
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
+                        </form>
+                    </li>                    
+                </ul>
+                <!--  search form end -->                
+            </div>
+
+            <div class="top-nav notification-row">                
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+                    
+                    <!-- task notificatoin start -->
+                    
+                    <!-- alert notification end-->
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="javascript=0;">
+                            <span class="profile-ava">
+                                <img alt="" src="img/user.png">
+                            </span>
+                            <span class="username">{{userD.firstName+" "+userD.lastName}}</span>
+                           
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#/login"><i class="icon_key_alt"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li>
+                      <a class="" href="#/gapprogress">
+                          <i></i>
+                          <span>Gap Analysis</span>
+                      </a>
+                  </li>
+				          <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i></i>
+                          <span>RM File Plan</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="form_component.html">Development</a></li>                          
+                          <li><a class="" href="form_validation.html">Implementation</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="">
+                      <a class="" href="index.html">
+                          <i></i>
+                          <span>RM Policy & Procedures</span>
+                      </a>
+                  </li>
+
+                  <li>
+                      <a class="" href="widgets.html">
+                          <i></i>
+                          <span>Captive ECM</span>
+                      </a>
+                  </li>
+                  <li>                     
+                      <a class="" href="chart-chartjs.html">
+                          <i></i>
+                          <span>Account</span>
+                          
+                      </a>
+                                         
+                  </li>
+                  <li>                     
+                      <a class="" href="chart-chartjs.html">
+                          <i></i>
+                          <span>Users</span>
+                          
+                      </a>
+                                         
+                  </li>
+
+                             
+                  
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->
+      <section id="main-content" style="color: #0B3C49">
+          <section class="wrapper">
+             <br>
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h1 align="center">RM Gap Analysis Report</h1>
+                  </div>
+
+                  <div class="panel-body">
+                    <div class="thumbnail">
+                     <strong><h2 align="center">Results & Recommendations</h2></strong>
+                     <hr>
+                      <table class="table table-striped table-advance table-hover col-xs-12">
+                         <tbody>
+                            <tr>
+                               <th>#</th>
+                               <th>Area</th>
+                               <th><i class="icon_piechart"> </i> Visualized</th>
+                               <th><i class="icon_percent"> </i> Score</th>
+                               <th></i> Recommendation</th>
+                            </tr>
+                            <tr ng-repeat="result in Results">
+                               <td>{{result.qnumber}}</td>
+                               
+                              <td>
+                                {{result.purpose}}
+                              </td>
+                              <td>
+                                <div class="progress">
+
+                                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{result.overall}}%;">
+                                    
+                                  </div>
+                                </div>
+                              </td>
+                              <td>{{result.overall+"%"}}</td>
+                              <td>Check out our payment packges</td>
+                            </tr>
+                                                         
+                         </tbody>
+                      </table> 
+                    </div>
+                    </div>
+
+
+                    <div class="thumbnail" style="">
+                      <strong><h2 align="center">Select a payment plan</h2></strong>
+                      <hr>
+                      <div class="container content">
+                      <div class="row">
+                        <!-- Pricing -->
+                        <div class=" col-lg-4 col-md-6 col-sm-12">
+                          <div class="pricing hover-effect">
+                            <div class="pricing-head">
+                              <h3>Essential<span>
+                               </span>
+                              </h3>
+                              <h4><i>$</i>14<i>.99</i>
+                              <span>
+                              Per Month </span>
+                              </h4>
+                            </div>
+                            <ul class="pricing-content list-unstyled">
+                              <li>
+                                File Plan Development & Maintenance
+                              </li>
+                              <li>
+                                File Plan Implementation & Maintenance
+                              </li>
+                              <li title="Enterprise Content Management Application">
+                                Captive ECM
+                              </li>
+                              <li>
+                                Support for 6 months
+                              </li>
+                            </ul>
+                            <div class="pricing-footer">
+                              
+                              <a href="javascript:;" class="btn yellow-crusta" data-toggle="modal" data-target="#myModal">
+                              Select
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                          <div class="pricing hover-effect">
+                            <div class="pricing-head">
+                              <h3>Proffesional <span>
+                               </span>
+                              </h3>
+                              <h4><i>$</i>19<i>.99</i>
+                              <span>
+                              Per Month </span>
+                              </h4>
+                            </div>
+                            <ul class="pricing-content list-unstyled">
+                              <li>
+                                Essential Plus...
+                              </li>
+                              <li>
+                                RM Audit
+                              </li>
+                              <li>
+                                RM Room Designer
+                              </li>
+                              <li>
+                                RM Policy & Procedure Development + Maintenance
+                              </li>
+                            </ul>
+                            <div class="pricing-footer">
+                              
+                              <a href="javascript:;" class="btn yellow-crusta" data-toggle="modal" data-target="#myModal">
+                              Select
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                          <div class="pricing hover-effect">
+                            <div class="pricing-head">
+                              <h3>Enterprise <span> </span>
+                              </h3>
+                              <h4><i>$</i>99<i>.99</i>
+                              <span>
+                              Per Month </span>
+                              </h4>
+                            </div>
+                            <ul class="pricing-content list-unstyled">
+                              <li>
+                                Proffesional Plus...
+                              </li>
+                              <li>
+                                MS Share point Intergration & Other ECM Apps
+                              </li>
+                              <li>
+                                Support Forever
+                              </li>
+                              <li>
+                                Centralised Dashboard
+                              </li>
+                            </ul>
+                            <div class="pricing-footer">
+                              <a href="javascript:;" class="btn yellow-crusta" data-toggle="modal" data-target="#myModal">
+                              Select
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <!--//End Pricing -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-footer">
+                    
+                        <button class="btn btn-default"  ng-click="reset()">Restart Gap Analysis</button>
+                      
+                  </div>
+              </div>
+          </section>
+      </section>
+
+     
+      
+  </section>
+
+   <!--Payment modal-->
+      <div class="container">
+        
+      
+  
+
+        <!-- Modal -->
+        <div class="modal fade flex-item" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" style="align-self: center">
+          <div class="modal-dialog modal-lg">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                      <div class="row">
+                          <!-- You can make it whatever width you want. I'm making it full width
+                               on <= small devices and 4/12 page width on >= medium devices -->
+                          <div class="col-sm-6">
+                          
+                          
+                              <!-- CREDIT CARD FORM STARTS HERE -->
+                              <div class="panel panel-default credit-card-box">
+                                  <div class="panel-heading display-table" >
+                                      <div class="row display-tr" >
+                                          <h3 class="panel-title display-td" >Payment Details</h3>
+                                          <div class="display-td" >                            
+                                              <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                          </div>
+                                      </div>                    
+                                  </div>
+                                  <div class="panel-body">
+                                      <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
+                                          <div class="row">
+                                              <div class="col-xs-12">
+                                                  <div class="form-group">
+                                                      <label for="cardNumber">Card Number</label>
+                                                      <div class="input-group">
+                                                          <input 
+                                                              type="tel"
+                                                              class="form-control"
+                                                              name="cardNumber"
+                                                              placeholder="Valid Card Number"
+                                                              autocomplete="cc-number"
+                                                              required autofocus 
+                                                          />
+                                                          <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                                      </div>
+                                                  </div>                            
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-xs-7 col-md-7">
+                                                  <div class="form-group">
+                                                      <label for="cardExpiry">Expiration Date</label>
+                                                      <input 
+                                                          type="tel" 
+                                                          class="form-control" 
+                                                          name="cardExpiry"
+                                                          placeholder="MM / YY"
+                                                          autocomplete="cc-exp"
+                                                          required 
+                                                      />
+                                                  </div>
+                                              </div>
+                                              <div class="col-xs-5 col-md-5 pull-right">
+                                                  <div class="form-group">
+                                                      <label for="cardCVC">CV Code</label>
+                                                      <input 
+                                                          type="tel" 
+                                                          class="form-control"
+                                                          name="cardCVC"
+                                                          placeholder="CVC"
+                                                          autocomplete="cc-csc"
+                                                          required
+                                                      />
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-xs-12">
+                                                  <div class="form-group">
+                                                      <label for="couponCode">COUPON CODE</label>
+                                                      <input type="text" class="form-control" name="couponCode" />
+                                                  </div>
+                                              </div>                        
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-xs-12">
+                                                  <button class="subscribe btn btn-info btn-lg btn-block" type="button">Start Subscription</button>
+                                              </div>
+                                          </div>
+                                          <div class="row" style="display:none;">
+                                              <div class="col-xs-12">
+                                                  <p class="payment-errors"></p>
+                                              </div>
+                                          </div>
+                                      </form>
+                                  </div>
+                              </div>            
+                              <!-- CREDIT CARD FORM ENDS HERE -->
+                              
+                              
+                          </div>            
+                          
+                      </div>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+  <!-- container section end -->
+    <!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script><!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+
+
+  </body>
+</html>

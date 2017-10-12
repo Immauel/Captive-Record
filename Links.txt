@@ -1,0 +1,3 @@
+https://www.packtpub.com/books/content/introduction-using-nodejs-and-hadoop-store-distributed-data
+https://www.cloudamqp.com/blog/2015-05-19-part2-2-rabbitmq-for-beginners_example-and-sample-code-node-js.html
+http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
