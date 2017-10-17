@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Captive Record</title>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+      <script src="js/lte-ie7.js"></script>
+    <![endif]-->
+
+
+    <style type="text/css">
+      .btn-width{
+        width: 230px;
+      }
+      /* required style*/ 
+      .none{display: none;}
+
+      /* optional styles */
+      table tr th, table tr td{font-size: 1.2rem;}
+      .row{ margin:20px 20px 20px 20px;width: 100%;}
+      .glyphicon{font-size: 20px;}
+      .glyphicon-plus{float: right;}
+      a.glyphicon{text-decoration: none;cursor: pointer;}
+      .glyphicon-trash{margin-left: 10px;}
+      .alert{
+          width: 50%;
+          border-radius: 0;
+          margin-top: 10px;
+          margin-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index.html" class="logo"><img src="img/logo-nav.png" width="40"><span class="lite">Captive Record</span></a>
+            <!--logo end-->
+
+            <div class="nav search-row" id="top_menu">
+                <!--  search form start -->
+                <ul class="nav top-menu">                    
+                    <li>
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
+                        </form>
+                    </li>                    
+                </ul>
+                <!--  search form end -->                
+            </div>
+
+            <div class="top-nav notification-row">                
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+                    
+                    <!-- task notificatoin start -->
+                    
+                    <!-- alert notification end-->
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="javascript=0;">
+                            <span class="profile-ava">
+                                <img alt="" src="img/user.png">
+                            </span>
+                            <span class="username">{{userD.firstName+" "+userD.lastName}}</span>
+                            
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#/login"><i class="icon_key_alt"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+       <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li>
+                      <a class="" href="#/clientHome">
+                          <i></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="" href="#/gapprogress">
+                          <i></i>
+                          <span>Gap Analysis</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i></i>
+                          <span>RM File Plan</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="form_component.html">Development</a></li>                          
+                          <li><a class="" href="form_validation.html">Implementation</a></li>
+                      </ul>
+                  </li>
+
+                  <li>
+                      <a class="" href="#/policy">
+                          <i></i>
+                          <span>Policy and Procedures</span>
+                      </a>
+                  </li>
+
+                  <li>
+                      <a class="" href="#/ecm">
+                          <i></i>
+                          <span>Captive ECM</span>
+                      </a>
+                  </li>
+                  <li>                     
+                      <a class="" href="#/account">
+                          <i></i>
+                          <span>Account</span>
+                          
+                      </a>
+                                         
+                  </li>
+                  <li>                     
+                      <a class="active" href="#/user">
+                          <i></i>
+                          <span>Users</span>
+                          
+                      </a>
+                                         
+                  </li>
+
+                             
+                  
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->
+      <section id="main-content" style="color: #0B3C49">
+          <section class="wrapper">
+             
+
+             <!--overview start-->
+              <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header"><i class="fa fa-user"></i> Users</h3>
+                    <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                        <li><i class="fa fa-laptop"></i>Users</li>                          
+                    </ol>
+                </div>
+            </div>
+            
+            <div>
+                    <div class="panel panel-default users-content">
+                        <div class="panel-heading" style="background-color: #eeeeee">Users <a href="javascript:void(0);" class="glyphicon     glyphicon-plus" onClick="$('.formUserData').slideToggle();" ></a></div>
+                            <div class="alert alert-danger userError none"><p></p></div>
+                            <div class="alert alert-success userSuccess none"><p></p></div>
+                            <div class="panel-body none formUserData">
+                                <form class="form" name="userForm">
+                                    <div class="form-group">
+                                      <div class="col-md-6">
+                                          <label class="control-label">First Name</label><br>
+                                          <input type="text" class="form-control" ng-model="user.firstName">
+                                      </div>
+
+                                      <div class="col-md-6">
+                                          <label class="control-label">Last Name</label><br>
+                                          <input type="text" class="form-control" ng-model="user.lastName">
+                                      </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <div class="col-md-6">
+                                          <label class="control-label"></label>Email<br>
+                                          <input type="email" class="form-control" ng-model="user.email">
+                                      </div>
+
+                                      <div class="col-md-6">
+                                          <label class="control-label">role</label><br>
+                                          <input type="Role" class="form-control" ng-model="user.role">
+                                      </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                     <div class="col-md-6">
+                                          <a href="javascript:void(0);" class="btn btn-default" onClick="$('.formUserData').slideUp();">Cancel</a>
+                                          <a href="javascript:void(0);" class="btn btn-default" ng-click="addUser()">Save</a>
+                                      </div>
+                                      
+                                    </div>
+                                    
+                                    
+                                    
+                                 </form>
+                                </div>
+                                <div class="well">
+                                    <form class="form">
+                                        <h4>search: </h4><input type="text" class="form-control" name="search" ng-model="search">
+                                    </form>
+                                </div>
+                                <table class="table table-striped">
+                                    <tr>
+                                        <th width="10%">#</th>
+                                        <th width="20%">First Name</th>
+                                        <th width="20%">Lsat Name</th>
+                                        <th width="20%">Email</th>
+                                        <th width="20%">Role</th>
+                                        <th width="10%">Action</th>
+                                    </tr>
+                                    <tr ng-repeat="user in users | filter:search | orderBy:'firstName'">
+                                        <td>{{$index + 1}}</td>
+                                        <td>{{user.firstName}}</td>
+                                        <td>{{user.lastName}}</td>
+                                        <td>{{user.email}}</td>
+                                        <td>{{user.role}}</td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="glyphicon glyphicon-edit" ng-click="editUser(user)"></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                </div>  
+            
+          </section>
+      </section>
+      
+  </section>
+  <!-- container section end -->
+    <!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script><!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,217 @@
+
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index.html" class="logo"><img src="img/logo-nav.png" width="40"><span class="lite">Captive Record</span></a>
+            <!--logo end-->
+
+            <div class="nav search-row" id="top_menu">
+                <!--  search form start -->
+                <ul class="nav top-menu">                    
+                    <li>
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
+                        </form>
+                    </li>                    
+                </ul>
+                <!--  search form end -->                
+            </div>
+
+            <div class="top-nav notification-row">                
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+                    
+                    <!-- task notificatoin start -->
+                    
+                    <!-- alert notification end-->
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="javascript=0;">
+                            <span class="profile-ava">
+                                <img alt="" src="img/user.png">
+                            </span>
+                            <span class="username">{{userD.firstName+" "+userD.lastName}}</span>
+                            
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top">
+                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+                            
+                            <li>
+                                <a href="#/login"><i class="icon_key_alt"></i> Log Out</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+      </header>      
+      <!--header end-->
+
+  <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li>
+                      <a class="active" href="#/clientHome">
+                          <i></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="" href="#/gapprogress">
+                          <i></i>
+                          <span>Gap Analysis</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i></i>
+                          <span>RM File Plan</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="form_component.html">Development</a></li>                          
+                          <li><a class="" href="form_validation.html">Implementation</a></li>
+                      </ul>
+                  </li>
+
+                  <li>
+                      <a class="" href="#/policy">
+                          <i></i>
+                          <span>Policy and Procedures</span>
+                      </a>
+                  </li>
+
+                  <li>
+                      <a class="" href="#/ecm">
+                          <i></i>
+                          <span>Captive ECM</span>
+                      </a>
+                  </li>
+                  <li>                     
+                      <a class="" href="#/account">
+                          <i></i>
+                          <span>Account</span>
+                          
+                      </a>
+                                         
+                  </li>
+                  <li>                     
+                      <a class="" href="#/user">
+                          <i></i>
+                          <span>Users</span>
+                          
+                      </a>
+                                         
+                  </li>
+
+                             
+                  
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->
+      <section id="main-content" style="color: #0B3C49">
+          <section class="wrapper">
+             <div class="row">
+                    <div class="col-lg-12">
+                      <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
+                      <ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                        <li><i class="fa fa-laptop"></i>Dashboard</li>                
+                      </ol>
+                    </div>
+                  </div>
+                          
+                        <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                      <div class="info-box blue-bg">
+                        <i class="fa fa-user"></i>
+                        <div class="count">5</div>
+                        <div class="title">Site Users</div>           
+                      </div><!--/.info-box-->     
+                    </div><!--/.col-->
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                      <div class="info-box brown-bg">
+                        <i class="fa fa-group"></i>
+                        <div class="count">2</div>
+                        <div class="title">Site Groups</div>            
+                      </div><!--/.info-box-->     
+                    </div><!--/.col-->  
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                      <div class="info-box dark-bg">
+                        <i class="fa fa-folder-open-o"></i>
+                        <div class="count">7</div>
+                        <div class="title">Categories</div>            
+                      </div><!--/.info-box-->     
+                    </div><!--/.col-->
+                    
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                      <div class="info-box green-bg">
+                        <i class="fa fa-files-o"></i>
+                        <div class="count">500</div>
+                        <div class="title">Records</div>            
+                      </div><!--/.info-box-->     
+                    </div><!--/.col-->
+                
+              </div><!--/.row-->
+
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="thumbnail">
+                    <img src="img/gapanalysis.png" alt="...">
+                    <div class="caption">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  
+                </div>
+              </div>
+      
+      
+           
+
+         
+          
+          </section>
+      </section>
+
+       <!-- container section end -->
+    <!-- javascripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script><!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+
+    <script src="assets/chart-master/Chart.js"></script>
+    <!-- custom chart script for this page only-->
+    <script src="js/chartjs-custom.js"></script>
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+      
+  </section>
+ 
+
+
+
+

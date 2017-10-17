@@ -1,0 +1,521 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>buy-a-brick</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords" content="buy a brick namibia, buy, brick, standard, bank, donate, build, house">
+    <meta name="description" content="buy a brick">
+    <meta name="author" content="Code Masters">
+    
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+  
+    <!-- Google Fonts -->
+    
+
+    <script>
+    function send() {
+      var b = document.getElementById("btn-input").value;
+      var a = document.getElementById("btn-input").value;
+      document.getElementById("sent_msg").innerHTML = b;
+      
+      if(a !=""){
+        if(a=="Hi?"){
+        document.getElementById("received_msg").innerHTML = "Hello there, how can we help you?";
+        }else if(a=="What are your contact details?"){
+        document.getElementById("received_msg").innerHTML = "Telephone: +0816580385, Email: info@buyabrick.com.na";
+        }else if(a=="Thank you."){
+        document.getElementById("received_msg").innerHTML = "Welcome.";
+        }else if(a=="Bye."){
+        document.getElementById("received_msg").innerHTML = "Bye, have a nice day.";
+        }else{
+        document.getElementById("received_msg").innerHTML = "We are processing your message, We will get back to you as soon as posible.";
+        }
+        document.getElementById("btn-input").value = "";
+        
+      }else{
+        document.getElementById("received_msg").innerHTML = "";
+      }
+    };
+    </script>
+
+    <script>
+      $(function() {
+        $(".video").click(function () {
+          var theModal = $(this).data("target"),
+          videoSRC = $(this).attr("data-video"),
+          videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+          $(theModal + ' iframe').attr('src', videoSRCauto);
+          $(theModal + ' button.close').click(function () {
+            $(theModal + ' iframe').attr('src', videoSRC);
+            $('.videoModal').css('top', $(window).height()/2 - $('.modal-window').height()/2);
+          });
+        });
+      });
+
+
+      </script>
+    
+    <!-- =======================================================
+      Theme Name: Bell
+      Theme URL: https://bootstrapmade.com/bell-free-bootstrap-4-template/
+      Author: BootstrapMade.com
+      Author URL: https://bootstrapmade.com
+    ======================================================= -->
+  </head>
+  
+  <body>
+    
+  <div style="background-color: #fff">
+    <script>
+      $(function() {
+        $(".video").click(function () {
+          var theModal = $(this).data("target"),
+          videoSRC = $(this).attr("data-video"),
+          videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+          $(theModal + ' iframe').attr('src', videoSRCauto);
+          $(theModal + ' button.close').click(function () {
+            $(theModal + ' iframe').attr('src', videoSRC);
+            $('.videoModal').css('top', $(window).height()/2 - $('.modal-window').height()/2);
+          });
+        });
+      });
+
+
+      </script>
+
+       <script src="js/custom.js"></script>
+   
+     <header id="header">
+        <div class="container navbar-static-top">
+        
+          <div id="logo" class="pull-left">
+            <img src="img/logo-nav.png" alt="" title="" /><span><strong>Captive Record</strong> </span>
+            <!-- Uncomment below if you prefer to use a text image -->
+            <!--<h1><a href="#hero">Bell</a></h1>-->
+          </div>
+            
+          <nav id="nav-menu-container ">
+            <ul class="nav-menu">
+              <li><a href="#about">About</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#customers">Customers</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#/pricing">Pricing</a></li>
+              <li><a href="#/support">Support</a></li>
+              <li><a href="#/login">Sign In</a></li>
+            </ul>
+          </nav><!-- #nav-menu-container -->
+          
+          <nav class="nav social-nav pull-right hidden-sm-down">
+            <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
+          </nav>
+        </div>
+      </header><!-- #header -->
+
+    <section class="hero">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" width="300" src="img/logo-nav.png"><h2 style="color: white">Captive Record</h2><br>
+               <strong><h1 style="color: white">Maximising The Value of Your Records</h1></strong>
+            </a>
+           
+            
+          </div>
+        </div>
+
+        <div class="col-md-12">
+           <a class="btn btn-default btn-lg" href="#/signup">Get Started Now</a>
+           <a class="btn btn-default video btn-lg" data-video="https://www.youtube.com/embed/8F7mdNjhzO4" data-toggle="modal" data-target="#videoModal" style="background-color: #7e1e8e">Demo Video</a>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="padding-top: 15%;">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <iframe width="100%" height="350" src="" frameborder="0" style="padding: 0px"  allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Hero -->
+    
+  <!-- Header -->
+ 
+  
+    <!-- About -->
+
+    <section class="about" id="about">
+      <div class="container text-center">
+        <h2>
+          About 
+        </h2>
+
+        <p>
+          Captive Records is an application responsible for the efficient and systematic control of the creation, receipt, maintenance, use and disposition of records, including the processes for capturing and maintaining evidence of and information about business activities and transactions in the form of records
+        </p>
+
+        <div class="row stats-row">
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">232</span>Customers
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">79</span>Partners
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">1,463</span>Services
+            </div>
+          </div>
+
+          <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="circle">
+              <span class="stats-no" data-toggle="counter-up">9</span> Features
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <!-- /About -->
+    <!-- Parallax -->
+     
+      <!--
+    <div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="img/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
+      <h2>
+        Welcome to a perfect theme
+      </h2>
+
+      <p>
+        This is the most powerful theme with thousands of options that you have never seen before.
+      </p>
+      <img alt="Bell - A perfect theme" class="gadgets-img hidden-md-down" src="img/gadgets.png">
+    </div>
+    /Parallax -->
+    <!-- Features -->
+
+    <section class="features" id="features" style="background-color: #f2f2f2">
+      <div class="container">
+        <h2 class="text-center">
+          Features
+        </h2>
+
+        <div class="row">
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class=" text-center">
+              <div>
+                <div>
+                  <a href="#" title="Home"><img src="img/gap.png" width="75" class="img-response"></a>
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Gap Analysis
+                </h3>
+
+                <p>
+                  Gap analysis involves the comparison of actual performance with potential or desired performance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class=" text-center">
+              <div>
+                <div>
+                  <img src="img/fpdev.png" width="75" class="img-response">
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  File Plan Development
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="text-center">
+              <div>
+                <div>
+                  <img src="img/fpimpl.png" width="75" class="img-response">
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  File Plan Implementation
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="text-center">
+              <div>
+                <div>
+                  <img src="img/audit.png" width="75" class="img-response">
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Record Managment Audit
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="text-center">
+              <div>
+                <div>
+                  <img src="img/room.png" width="75" class="img-response">
+                </div>
+              </div>
+
+              <div>
+                <h3>
+                  Record Managment Room
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-col col-lg-4 col-xs-12">
+            <div class="text-center">
+              <div>
+                <div>
+                  <img src="img/app.png" width="75" class="img-response">
+                </div><br>
+              </div>
+
+              <div>
+                <h3>
+                  Electronic Document Record Managment System & ECM add-ons
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <!-- /Features -->
+   
+    <!-- Team -->
+   
+
+    <section class="team" id="customers">
+      <div class="container">
+        <h2 class="text-center">
+          The best stories have our customers in them
+        </h2>
+
+        <div class="row">
+          <div class="col-sm-3 col-xs-6">
+            <div class="card card-block customer">
+              <a href="#"><img alt="" class="team-img " src="img/erongo.png"></a>
+            </div>
+          </div>
+
+          <div class="col-sm-3 col-xs-6">
+            <div class="card card-block customer">
+              <a href="#"><img alt="" class="team-img " src="img/namcol.png"></a>
+            </div>
+          </div>
+
+          <div class="col-sm-3 col-xs-6">
+            <div class="card card-block customer">
+              <a href="#"><img alt="" class="team-img" width="150" src="img/road.jpg"></a>
+            </div>
+          </div>
+
+          <div class="col-sm-3 col-xs-6">
+            <div class="card card-block customer">
+              <a href="#"><img alt="" class="team-img" src="img/bankna.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <!-- /Team -->
+    <!-- @component: footer -->
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="section-title">Contact Us</h2>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-3 offset-lg-2">
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Location<br>Windhoek</p>
+              </div>
+              
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>info@captiverecords.com.na</p>
+              </div>
+              
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+264 61 320 6399</p>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="col-lg-5">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <div class="validation"></div>
+                  </div>
+                  <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+      
+    <footer class="site-footer">
+      <div class="bottom">
+        <div class="container">
+          <div class="row">
+
+           
+            
+            <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <a href="index.html">Home</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a href="#about">About Us</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a href="#features">Features</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a href="#/support">Support</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a href="#team">Customers</a>
+                </li>
+
+                <li class="list-inline-item">
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a> 
+
+    <!-- Required JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/tether/js/tether.min.js"></script>
+    <script src="lib/stellar/stellar.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/easing/easing.js"></script>
+    <script src="lib/stickyjs/sticky.js"></script>
+    <script src="lib/parallax/parallax.js"></script>
+    <script src="lib/lockfixed/lockfixed.min.js"></script>
+    
+    
+  </div>
+
+  </body>
+</html>

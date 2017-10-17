@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My single page app</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	
+	<script src = 'app.js'></script>
+	<script src = 'config.js'></script>
+	<script src = 'view1Ctrl.js'></script>
+	<script src = 'view2Ctrl.js'></script>
+</head>
+<body ng-app="mainA">
+	<h1>Welcome to my single page app</h1>
+
+	<a href="#/view1.html">View 1</a>
+	<a href="#/view2.html">View 2</a>
+
+	<div ng-view>
+		
+	</div>
+</body>
+</html>
