@@ -209,15 +209,24 @@
                                       </div>
 
                                       <div class="col-md-6">
-                                          <label class="control-label">role</label><br>
-                                          <input type="Role" class="form-control" ng-model="user.role">
+                                          <label class="control-label">Roles</label><br>
+                                          <div class=" well">
+                                            <label ng-repeat="role in user.roles">
+                                              {{role.name+"    "}} 
+                                               <button class="btn btn-danger" ng-click="deleteRole(role)"><span class="glyphicon glyphicon-trash"></span></button><br>
+                                            </label>
+                                            
+                                             <button class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button>
+                                          </div>
+                                         
                                       </div>
                                     </div>
 
                                     <div class="form-group">
                                      <div class="col-md-6">
-                                          <a href="javascript:void(0);" class="btn btn-default" onClick="$('.formUserData').slideUp();">Cancel</a>
-                                          <a href="javascript:void(0);" class="btn btn-default" ng-click="addUser()">Save</a>
+                                          <a href="javascript:void(0);" class="btn btn-warning" onClick="$('.formUserData').slideUp();" ng-click="cancel()">Cancel</a>
+                                          <a href="javascript:void(0);" class="btn btn-primary" ng-click="saveUser()" ng-hide="user._id">Save</a>
+                                          <a href="javascript:void(0);" class="btn btn-success" ng-click="updateUser()" ng-hide="!user._id">Update</a>
                                       </div>
                                       
                                     </div>
@@ -237,7 +246,6 @@
                                         <th width="20%">First Name</th>
                                         <th width="20%">Lsat Name</th>
                                         <th width="20%">Email</th>
-                                        <th width="20%">Role</th>
                                         <th width="10%">Action</th>
                                     </tr>
                                     <tr ng-repeat="user in users | filter:search | orderBy:'firstName'">
@@ -245,9 +253,9 @@
                                         <td>{{user.firstName}}</td>
                                         <td>{{user.lastName}}</td>
                                         <td>{{user.email}}</td>
-                                        <td>{{user.role}}</td>
                                         <td>
                                             <a href="javascript:void(0);" class="glyphicon glyphicon-edit" ng-click="editUser(user)"></a>
+                                            <a href="javascript:void(0);" class="glyphicon glyphicon-trash" ng-click="deleteUser(user)"></a>
                                         </td>
                                     </tr>
                                 </table>
@@ -258,6 +266,43 @@
       </section>
       
   </section>
+
+
+  <div class="modal fade flex-item" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" style="margin-top: 60px; vertical-align: center" aria-hidden="true">
+          <div class="modal-dialog" style="margin-left:-222px">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Add Role</h3>
+              </div>
+              <div class="modal-body">
+                
+
+                <table class="table table-striped">
+                    <tr>
+                        <th>#</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr ng-repeat="rol in roles | filter:search | orderBy:'firstName'">
+                        <td>{{$index + 1}}</td>
+                        <td>{{rol.name}}</td>
+                        <td>
+                            <a href="javascript:void(0);" class="glyphicon glyphicon-plus" ng-click="addRole(rol)"></a>
+                        </td>
+                    </tr>
+                </table>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
   <!-- container section end -->
     <!-- javascripts -->
     <script src="js/jquery.js"></script>

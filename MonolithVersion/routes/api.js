@@ -17,6 +17,9 @@ var GapResults = require('../models/GapResult.js');
 var User = require('../models/Users.js');
 var Company = require('../models/Company.js');
 
+var Capablities = require('../models/Capablities.js');
+var Role = require('../models/Role.js');
+
 
 
 
@@ -128,7 +131,7 @@ router.post('/login',function(req,res){
                         firstName: user.firstName,
                         lastName: user.lastName,
                         email:user.email,
-                        role: user.role //Owner, admin, HOD, Sale, FPI team,
+                        roles: user.role //Owner, admin, HOD, Sale, FPI team,
 
                     });
                 })
@@ -139,7 +142,7 @@ router.post('/login',function(req,res){
 
 
 //All routes after this middleware are secured
-User.methods(['get','put','delete']);
+User.methods(['get','put','delete','post']);
 User.register(router,'/users');
 
 Company.methods(['get','put','post','delete']);
@@ -226,6 +229,18 @@ router.post('/finalResults',function(req,res){
 })
 
 
+router.get('/companyUsers/:companyId',function(req,res){
+
+		User.find({company:req.params.companyId},function(err,users){
+				if(err){
+					console.log(err);
+					res.send(err)
+				}else{
+					res.send(users)
+				}
+		});
+});
+
 
 //This automatically creates a RESTAPI
 GapQuestions.methods(['get','put','post','delete']);
@@ -234,5 +249,11 @@ GapQuestions.register(router,'/questions');
 
 GapResults.methods(['get','put','post','delete']);
 GapResults.register(router,'/results');
+
+Role.methods(['get','put','post','delete']);
+Role.register(router,'/roles');
+
+Capablities.methods(['get','put','post','delete']);
+Capablities.register(router,'/capabilities');
 
 module.exports=router;

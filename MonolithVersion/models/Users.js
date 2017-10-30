@@ -10,7 +10,14 @@ var userSchema = mongoose.Schema({
  		email:{type: String, unique:true, required: true},
  		password:String,
  		company: {required: true, type: String},
- 		role: String //Owner, admin, HOD, Sale, FPI team,
+ 		roles: [
+ 			{
+ 				name: String,
+		 		title: String,
+		 		description:String,
+		 		capabilities:[{name: String}]
+ 			}
+ 		],
 });
 
 userSchema.pre('save', function(next){

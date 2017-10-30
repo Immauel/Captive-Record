@@ -228,7 +228,172 @@ angular.module('mainApp').controller('policyCtrl',function($scope,$routeParams,$
 });
 
 angular.module('mainApp').controller('userCtrl',function($scope,$routeParams,$location,$rootScope,clientService){
+
+	$scope.user ={};
+	$scope.user.roles=[];
+
 	$scope.$emit('UNLOAD');
+
+
+	   $scope.changeRoute = function(url, forceReload) {
+        $scope = $scope || angular.element(document).scope();
+        if(forceReload || $scope.$$phase) { // that's right TWO dollar signs: $$phase
+            window.location = url;
+        } else {
+            $location.path(url);
+            $scope.$apply($scope.token);
+        }
+     }
+
+   if($rootScope.token){
+   			$scope.userD = $rootScope.userDetails;
+   		clientService.get('api/companyUsers/'+$rootScope.companyId,function(response,err){
+   			if(err){
+   				alert("Something went wrong while trying to retrieve users")
+   			}
+   			else{
+   				$scope.users = response;
+   			}
+   		});
+
+   		clientService.get('api/roles',function(response,err){
+   			if(err){
+   				alert("Something went wrong while trying to retrieve users")
+   			}
+   			else{
+   				$scope.roles = response;
+   			}
+   		});
+
+
+
+   }else{
+   	$scope.changeRoute("#/login");
+   }
+
+   $scope.editUser = function(user){
+   		$scope.user=user;
+
+   		$scope.index = $scope.users.indexOf(user);
+        $('.formUserData').slideDown();
+   };
+
+   $scope.cancel = function(){
+   		$scope.user = {};
+   		$scope.user.roles = [];
+   }
+
+   $scope.saveUser = function(){
+
+   		$scope.user.company =  $scope.userD.companyId;
+   		clientService.post($scope.user,'api/users',function(response,err){
+   			if(err){
+   				alert("Something went wrong while trying to retrieve users")
+   			}
+   			else{
+   				clientService.get('api/companyUsers/'+$rootScope.companyId,function(response,err){
+			   			if(err){
+			   				alert("Something went wrong while trying to retrieve users")
+			   			}
+			   			else{
+			   				alert("User Successfully saved!")
+			   				$scope.users = response;
+			   				 $('.formUserData').slideUp();
+   				 			$scope.cancel();
+			   			}
+		   		});
+
+   				
+
+   			}
+   		});
+   }
+
+
+
+   $scope.updateUser = function(){
+   		
+   		clientService.put($scope.user,'api/users/'+$scope.user._id,function(response,err){
+   			if(err){
+   				alert("Something went wrong while trying to retrieve users")
+   			}
+   			else{
+   				clientService.get('api/companyUsers/'+$rootScope.companyId,function(response,err){
+			   			if(err){
+			   				alert("Something went wrong while trying to retrieve users")
+			   			}
+			   			else{
+			   				alert("User Successfully updated")
+			   				$scope.users = response;
+			   			}
+		   		});
+   			}
+   		});
+   }
+
+   $scope.addRole = function(role){
+   		
+
+   		var flag =0;
+
+   		for(var c =0; c<$scope.user.roles; c++){
+
+   				if($scope.user.roles[c]._id === role._id){
+   					flag =1;
+   				}
+   		}
+
+   		if(flag!=0){
+   			alert("This role is already assigned to this users!");
+   		}
+   		else{
+   			$scope.user.roles.push(role);
+   			$scope.updateUser();
+   		}
+   }
+
+   $scope.deleteRole = function(role){
+
+   		
+
+	    var conf = confirm('Are you sure you want to unasign '+role.name+' from '+$scope.user.firstName);
+        if(conf === true){
+           var index = $scope.user.roles.indexOf(role);
+	       $scope.user.roles.splice(index,1);
+
+	       $scope.updateUser();
+        }
+
+
+   }
+
+   $scope.deleteUser = function(user){
+
+   		    var conf = confirm('Are you sure to delete the user?');
+	        if(conf === true){
+	            var index = $scope.users.indexOf(user);
+	      	    $scope.users.splice(index,1);
+
+	      	    clientService.delete('api/users/'+user._id,function(response,err){
+		   			if(err){
+		   				alert("Something went wrong while trying to retrieve users")
+		   			}
+		   			else{
+		   				clientService.get('api/companyUsers/'+$rootScope.companyId,function(response,err){
+					   			if(err){
+					   				alert("Something went wrong while trying to retrieve users")
+					   			}
+					   			else{
+					   				alert("User Successfully updated")
+					   				$scope.users = response;
+					   			}
+				   		});
+		   			}
+		   		});
+	        }
+   }
+
+
 	
 });
 

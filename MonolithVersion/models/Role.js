@@ -7,7 +7,7 @@ var roleSchema = mongoose.Schema({
  		name: String,
  		title: String,
  		description:String,
- 		capabilities:[]
+ 		capabilities:[{name: String}]
 });
 
 //Return schema

@@ -5,9 +5,6 @@ var jsonwebtoken= require('jsonwebtoken');
 var router = express.Router();
 
 
-//Models
-
-
 var GapQuestions = require('../models/GapQuestions.js');
 var GapResults = require('../models/GapResult.js');
 

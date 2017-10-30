@@ -29,6 +29,19 @@ app.service("clientService", function($http){
         });
     }
 
+    this.delete =function(url, callback){
+        $http.delete(url,{
+            headers:{
+                'Content-Type': 'application/json'
+                
+            }
+        }).success(function(response){
+            callback(response);
+        }).error(function(error){
+            callback(error);
+        });
+    }
+
     this.get =function(url, callback){
         $http.get(url,{
             headers:{
