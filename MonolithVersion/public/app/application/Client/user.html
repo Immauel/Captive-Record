@@ -208,28 +208,44 @@
                                           <input type="email" class="form-control" ng-model="user.email">
                                       </div>
 
-                                      <div class="col-md-6">
+                                      <div class="col-md-6" >
                                           <label class="control-label">Roles</label><br>
                                           <div class=" well">
-                                            <label ng-repeat="role in user.roles">
-                                              {{role.name+"    "}} 
-                                               <button class="btn btn-danger" ng-click="deleteRole(role)"><span class="glyphicon glyphicon-trash"></span></button><br>
-                                            </label>
                                             
-                                             <button class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button>
+
+                                            <table class="table table-striped" >
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Role</th>
+                                                    <th>Remove</th>
+                                                </tr>
+                                                <tr ng-repeat="role in user.roles">
+                                                    <td>{{$index + 1}}</td>
+                                                    <td>{{role.name}}</td>
+                                                    <td>
+                                                        <a href="javascript:void(0);" class="glyphicon glyphicon-trash" ng-click="deleteRole(role)"></a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            
+                                             <button class="btn btn-default" ng-show = "user._id" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button>
                                           </div>
                                          
                                       </div>
                                     </div>
 
-                                    <div class="form-group">
-                                     <div class="col-md-6">
-                                          <a href="javascript:void(0);" class="btn btn-warning" onClick="$('.formUserData').slideUp();" ng-click="cancel()">Cancel</a>
-                                          <a href="javascript:void(0);" class="btn btn-primary" ng-click="saveUser()" ng-hide="user._id">Save</a>
-                                          <a href="javascript:void(0);" class="btn btn-success" ng-click="updateUser()" ng-hide="!user._id">Update</a>
+                                      <br>
+                                      <hr>
+                                      <div class="form-group row">
+                                       <div class="col-md-6">
+                                            <a href="javascript:void(0);" class="btn btn-warning" onClick="$('.formUserData').slideUp();" ng-click="cancel()">Cancel</a>
+                                            <a href="javascript:void(0);" class="btn btn-primary" ng-click="saveUser()" ng-hide="user._id">Save</a>
+                                            <a href="javascript:void(0);" class="btn btn-success" ng-click="updateUser()" ng-hide="!user._id">Update</a>
+                                        </div>
+                                        
                                       </div>
-                                      
-                                    </div>
+                                  
                                     
                                     
                                     
@@ -279,6 +295,7 @@
               <div class="modal-body">
                 
 
+                
                 <table class="table table-striped">
                     <tr>
                         <th>#</th>
@@ -293,7 +310,6 @@
                         </td>
                     </tr>
                 </table>
-
 
               </div>
               <div class="modal-footer">
